@@ -43,7 +43,7 @@ productController.insertProducts = async (req, res) => {
 productController.updateProduct = async (req, res) => {
     try{
         //solicitamos datos
-        const {name, category, brand, price,} = req.body;
+        const {name, category, brand, price} = req.body;
 
         const productFound = await productModel.findById(req.params.id)
 

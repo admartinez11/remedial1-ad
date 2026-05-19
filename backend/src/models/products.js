@@ -6,7 +6,6 @@ const productSchema = new Schema({
     },
     category: {
         type: String,
-       
     },
     brand: {
         type: String,
@@ -25,4 +24,4 @@ const productSchema = new Schema({
     strict: false
 })
  
-export default model("products", productSchema)
+export default model("Products", productSchema)

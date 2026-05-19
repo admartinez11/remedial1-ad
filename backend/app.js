@@ -1,5 +1,8 @@
 import express from "express";
-import productRoutes from "./src/routes/products.js"
+import productRoutes from "./src/routes/products.js";
+import categoryRoutes from "./src/routes/categories.js";
+import brandRoutes from "./src/routes/brands.js";
+import promotionRoutes from "./src/routes/promotions.js";
 
 import cookieParser from "cookie-parser";
 import cors from "cors";
@@ -21,6 +24,8 @@ app.use(cookieParser());
 app.use(express.json());
 
 app.use ("/api/products", productRoutes);
-
+app.use ("/api/categories", categoryRoutes);
+app.use ("/api/brands", brandRoutes);
+app.use ("/api/promotions", promotionRoutes);
 
 export default app; 
